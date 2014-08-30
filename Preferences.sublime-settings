@@ -1,0 +1,17 @@
+{
+	"color_scheme": "Packages/User/KoralGreen.tmTheme",
+	"theme": "Soda Dark.sublime-theme",
+
+	"font_face": "Consolas",
+	"font_size": 10,
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
+
+	"translate_tabs_to_spaces": true,
+	"tab_size": 4,
+	"detect_indentation": true,
+
+	"caret_style": "phase",
+	"highlight_line": true,
+	"rulers": [ 80, 120 ]
+}
