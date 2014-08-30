@@ -6,12 +6,20 @@
 	"font_size": 10,
 	"line_padding_bottom": 3,
 	"line_padding_top": 3,
+	"caret_extra_top": 3,
+	"caret_extra_bottom": 3,
+	"caret_style": "phase",
 
 	"translate_tabs_to_spaces": true,
 	"tab_size": 4,
 	"detect_indentation": true,
 
-	"caret_style": "phase",
 	"highlight_line": true,
-	"rulers": [ 80, 120 ]
+	"rulers": [ 80, 120 ],
+	"ignored_packages": [ "Vintage" ],
+	"word_wrap": true,
+	"auto_complete_commit_on_tab": true,
+	"drag_text": false,
+	"highlight_modified_tabs": true,
+	"show_encoding": true
 }
