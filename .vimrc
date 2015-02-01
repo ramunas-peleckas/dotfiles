@@ -2,6 +2,7 @@
 
 " extract plugins
 execute pathogen#infect()
+
 filetype plugin indent on
 
 " enable syntax highlighting
@@ -25,7 +26,9 @@ set number
 " Tabs
 " 2 space tab
 set tabstop=2
+set shiftwidth=2
 set softtabstop=2
+
 " use spaces for tabs
 set expandtab
 
@@ -40,7 +43,14 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+nmap <CR> o<Esc>
+
+command WQ wq
+command Wq wq
+command W w
+command Q q
 
 " NERD Tree 
 noremap <Leader>n :NERDTreeToggle<cr>
 
+let NERDSpaceDelims=1
