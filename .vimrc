@@ -13,7 +13,7 @@ syntax enable
 
 " set color scheme
 set background=dark
-colorscheme jellybeans
+colorscheme hybrid
 
 " always display status line
 set laststatus=2 

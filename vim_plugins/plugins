@@ -10,10 +10,9 @@ git clone https://github.com/ervandew/supertab.git
 git clone https://github.com/scrooloose/syntastic.git 
 git clone https://github.com/bling/vim-airline.git
 git clone https://github.com/edkolev/tmuxline.vim
-git clone https://github.com/nanotech/jellybeans.vim.git
 git clone https://github.com/airblade/vim-gitgutter.git
 git clone https://github.com/tpope/vim-dispatch.git
 git clone https://github.com/tpope/vim-rails.git
 git clone https://github.com/thoughtbot/vim-rspec.git 
 git clone https://github.com/jgdavey/tslime.vim.git
-
+git clone https://github.com/w0ng/vim-hybrid.git
