@@ -1,6 +1,6 @@
 " Ramunas
 
-" Use vim settings, rather than vi settings.
+" use vim settings, rather than vi settings.
 set nocompatible
 
 " extract plugins
@@ -21,7 +21,6 @@ set laststatus=2
 " show line numbers
 set number
 
-" Tabs
 " 2 space tab
 set tabstop=2
 set shiftwidth=2
@@ -30,19 +29,23 @@ set softtabstop=2
 " use spaces for tabs
 set expandtab
 
-" Display extra whitespace
+" display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
 " search as characters are entered
 set incsearch
 
+" disable swap file
+set noswapfile
+
+" display vertical line
 set textwidth=120
 set colorcolumn=+1
 
-" Change leader key
+" change leader key
 let mapleader=","
 
-" Custom key bindings
+" custom key bindings
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
@@ -77,4 +80,3 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-let g:syntastic_ruby_checkers = ['rubocop']
