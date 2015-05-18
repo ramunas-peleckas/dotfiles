@@ -28,7 +28,6 @@ git clone https://github.com/edkolev/tmuxline.vim
 git clone https://github.com/ervandew/supertab.git
 git clone https://github.com/scrooloose/syntastic.git 
 git clone https://github.com/kchmck/vim-coffee-script.git
-git clone https://github.com/airblade/vim-gitgutter.git
 
 git clone https://github.com/tpope/vim-rails.git
 git clone https://github.com/thoughtbot/vim-rspec.git 
