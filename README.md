@@ -1,20 +1,20 @@
 # Dotfiles
 
-# Vim installation
+## Vim installation
 
-1. Install vim
+Install vim
 
 ```sh
 sudo apt-get install vim
 ```
 
-2. Get python header files
+Get python header files
 
 ```sh
 sudo apt-get install python-dev
 ```
 
-3. Install vim plugins
+Install vim plugins
 
 ```sh
 ./vim_install.sh
