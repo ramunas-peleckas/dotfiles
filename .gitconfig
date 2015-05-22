@@ -1,0 +1,14 @@
+[user]
+	name = Ramunas
+	email = ramunas.peleckas@gmail.com
+[core]
+	editor = vim
+  excludesfile = ~/.gitignore
+[alias]
+  aa = add --all
+	co = checkout
+	br = branch
+	cm = commit
+	st = status
+  g = grep --line-number --heading --break
+
