@@ -3,8 +3,27 @@
 " use vim settings, rather than vi settings.
 set nocompatible
 
-" extract plugins
-execute pathogen#infect()
+filetype off
+
+" set up plugins
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'w0ng/vim-hybrid'
+Plugin 'bling/vim-airline'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/syntastic'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-rails'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'jgdavey/tslime.vim'
+
+call vundle#end()
 
 filetype plugin indent on
 
@@ -61,6 +80,7 @@ command Q q
 noremap <Leader>n :NERDTreeToggle<cr>
 
 let NERDSpaceDelims=1
+let NERDTreeShowHidden=1
 
 " CtrlP
 if executable('ag')
@@ -69,14 +89,13 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
-nnoremap <Leader>. :CtrlPTag<cr>
-
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+let g:ctrlp_dotfiles=1
 
 " RSpec
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 
