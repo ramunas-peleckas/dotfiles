@@ -1,31 +1,26 @@
-" Ramunas
-
-" use vim settings, rather than vi settings.
+" use vim settings instead of vi settings
 set nocompatible
 
 filetype off
 
 " set up plugins
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'JazzCore/ctrlp-cmatcher'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'w0ng/vim-hybrid'
-Plugin 'bling/vim-airline'
-Plugin 'jgdavey/tslime.vim'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'isRuslan/vim-es6'
-Plugin 'tpope/vim-rails'
-Plugin 'thoughtbot/vim-rspec'
+Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim/' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-call vundle#end()
+Plug 'kchmck/vim-coffee-script'
+Plug 'isRuslan/vim-es6'
+
+Plug 'tpope/vim-rails'
+Plug 'thoughtbot/vim-rspec'
+
+call plug#end()
 
 filetype plugin indent on
 
@@ -34,10 +29,10 @@ syntax enable
 
 " set color scheme
 set background=dark
-colorscheme hybrid
+colorscheme Tomorrow-Night
 
 " always display status line
-set laststatus=2 
+set laststatus=2
 
 " show line numbers
 set number
@@ -56,8 +51,8 @@ set list listchars=tab:»·,trail:·,nbsp:·
 " search as characters are entered
 set incsearch
 
-" disable swap file
-set noswapfile
+" set swap file directory
+set directory^=$HOME/.vim/swap//
 
 " display vertical line
 set textwidth=120
@@ -68,6 +63,7 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+map <C-p> :Files<CR>
 nmap <CR> o<Esc>
 
 command WQ wq
@@ -83,15 +79,10 @@ let NERDSpaceDelims=1
 let NERDTreeShowHidden=1
 let NERDTreeWinSize=40
 
-" CtrlP
-let g:ctrlp_dotfiles = 1
-let g:ctrlp_max_files = 0
-let g:ctrlp_use_caching = 0
-let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
-
-if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-endif
+" Airline
+let g:airline_theme='tomorrow'
+let g:airline#extensions#tabline#enabled=1
+let g:airline_powerline_fonts=1
 
 " RSpec
 map <Leader>t :call RunCurrentSpecFile()<CR>
