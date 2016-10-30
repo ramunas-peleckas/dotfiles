@@ -14,6 +14,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'plasticboy/vim-markdown'
+
 Plug 'kchmck/vim-coffee-script'
 Plug 'isRuslan/vim-es6'
 
@@ -83,6 +85,9 @@ let NERDTreeWinSize=40
 let g:airline_theme='tomorrow'
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
+
+" Vim markdown
+let g:vim_markdown_folding_disabled=1
 
 " RSpec
 map <Leader>t :call RunCurrentSpecFile()<CR>
