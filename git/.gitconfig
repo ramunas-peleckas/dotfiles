@@ -13,4 +13,5 @@
   cm = commit
   st = status
   g = grep --line-number --heading --break
-
+[merge]
+  conflictstyle = diff3
