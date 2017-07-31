@@ -1,37 +1,39 @@
 " use vim settings instead of vi settings
 set nocompatible
 
+" filetype off is required for plugins to load properly
 filetype off
 
 " set up plugins
 call plug#begin()
 
-Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim/' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
+
+Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'plasticboy/vim-markdown'
-
-Plug 'kchmck/vim-coffee-script'
 Plug 'isRuslan/vim-es6'
-
-Plug 'tpope/vim-rails'
-Plug 'thoughtbot/vim-rspec'
 
 call plug#end()
 
 filetype plugin indent on
 
 " enable syntax highlighting
-syntax enable
+if !exists('g:syntax_on')
+  syntax enable
+endif
 
 " set color scheme
-set background=dark
-colorscheme Tomorrow-Night
+let base16colorspace=256
+
+if !exists('g:colors_name') || g:colors_name != 'base16-ocean' 
+  colorscheme base16-ocean
+endif
 
 " always display status line
 set laststatus=2
@@ -68,12 +70,7 @@ map <C-l> <C-w>l
 map <C-p> :Files<CR>
 nmap <CR> o<Esc>
 
-command WQ wq
-command Wq wq
-command W w
-command Q q
-
-" NERD Tree 
+" NERD Tree
 noremap <Leader>n :NERDTreeToggle<cr>
 noremap <Leader>m :NERDTreeFind<cr>
 
@@ -82,16 +79,9 @@ let NERDTreeShowHidden=1
 let NERDTreeWinSize=40
 
 " Airline
-let g:airline_theme='tomorrow'
+let g:airline_theme='base16_shell'
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
 
 " Vim markdown
 let g:vim_markdown_folding_disabled=1
-
-" RSpec
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
