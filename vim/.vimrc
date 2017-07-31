@@ -9,8 +9,7 @@ call plug#begin()
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
@@ -55,28 +54,20 @@ set list listchars=tab:»·,trail:·,nbsp:·
 " search as characters are entered
 set incsearch
 
-" set swap file directory
-set directory^=$HOME/.vim/swap//
+" set swap and backup file directories
+set directory=~/.vim/.swap//
+set backupdir=~/.vim/.backup//
 
 " display vertical line
 set textwidth=120
 set colorcolumn=+1
 
 " custom key bindings
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
 map <C-p> :Files<CR>
-nmap <CR> o<Esc>
 
-" NERD Tree
-noremap <Leader>n :NERDTreeToggle<cr>
-noremap <Leader>m :NERDTreeFind<cr>
-
-let NERDSpaceDelims=1
-let NERDTreeShowHidden=1
-let NERDTreeWinSize=40
+" netrw
+let g:netrw_liststyle=3
+let g:netrw_banner=0
 
 " Airline
 let g:airline_theme='base16_shell'
