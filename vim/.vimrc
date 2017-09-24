@@ -66,7 +66,6 @@ set colorcolumn=+1
 map <C-p> :Files<CR>
 
 " netrw
-let g:netrw_liststyle=3
 let g:netrw_banner=0
 
 " Airline
