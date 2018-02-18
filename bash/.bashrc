@@ -40,6 +40,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# set default editor
+export EDITOR=vim
+export VISUAL=vim
+
 # set up Base 16 shell colors
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"

@@ -1,4 +1,4 @@
-install: install-vim install-git install-tmux install-bash
+install: install-vim install-git install-tmux install-bash install-readline
 
 install-vim:
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -17,3 +17,6 @@ install-tmux:
 install-bash:
 	git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 	ln -s `pwd`/bash/.bashrc ~/.bashrc
+
+install-readline:
+	ln -s `pwd`/bash/.inputrc ~/.inputrc
