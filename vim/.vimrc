@@ -1,9 +1,6 @@
 " use vim settings instead of vi settings
 set nocompatible
 
-" filetype off is required for plugins to load properly
-filetype off
-
 " set up plugins
 call plug#begin()
 
@@ -19,13 +16,6 @@ Plug 'plasticboy/vim-markdown'
 Plug 'isRuslan/vim-es6'
 
 call plug#end()
-
-filetype plugin indent on
-
-" enable syntax highlighting
-if !exists('g:syntax_on')
-  syntax enable
-endif
 
 " set color scheme
 let base16colorspace=256
