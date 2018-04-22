@@ -71,7 +71,9 @@ let g:netrw_banner=0
 " Airline
 let g:airline_theme='base16_shell'
 let g:airline#extensions#tabline#enabled=1
-let g:airline_powerline_fonts=1
+
+" Disable powerline symbols
+let g:tmuxline_powerline_separators=0
 
 " Vim markdown
 let g:vim_markdown_folding_disabled=1
