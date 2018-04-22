@@ -19,4 +19,4 @@ install-bash:
 	ln -s `pwd`/bash/.bashrc ~/.bashrc
 
 install-readline:
-	ln -s `pwd`/bash/.inputrc ~/.inputrc
+	ln -s `pwd`/readline/.inputrc ~/.inputrc
