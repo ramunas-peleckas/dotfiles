@@ -1,5 +1,5 @@
 [user]
-  name = Ramunas
+  name = Ramunas Peleckas
   email = ramunas.peleckas@gmail.com
 [core]
   editor = vim
@@ -15,3 +15,5 @@
   g = grep --line-number --heading --break
 [merge]
   conflictstyle = diff3
+[grep]
+  fallbackToNoIndex = true
