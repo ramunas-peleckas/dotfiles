@@ -1,5 +1,5 @@
-" use vim settings instead of vi settings
-set nocompatible
+" filetype off is required for plugins to load properly
+filetype off
 
 " set up plugins
 call plug#begin()
@@ -7,22 +7,21 @@ call plug#begin()
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
-
 Plug 'chriskempson/base16-vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
+Plug 'jgdavey/tslime.vim'
 
+" language specific
 Plug 'plasticboy/vim-markdown'
-Plug 'isRuslan/vim-es6'
 
 call plug#end()
 
+" enable filetype specific settings
+filetype plugin indent on
+
 " set color scheme
 let base16colorspace=256
-
-if !exists('g:colors_name') || g:colors_name != 'base16-ocean' 
-  colorscheme base16-ocean
-endif
+colorscheme base16-ocean
 
 " always display status line
 set laststatus=2
@@ -52,17 +51,25 @@ set backupdir=~/.vim/.backup//
 set textwidth=120
 set colorcolumn=+1
 
-" custom key bindings
+" reduce key code delay
+set ttimeoutlen=10
+
+" fzf
 map <C-p> :Files<CR>
+nnoremap <silent> <Leader>g :Rg! <C-R><C-W><CR>
+vnoremap <silent> <Leader>g y:Rg! <C-R>"<CR>
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --fixed-strings --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
 
 " netrw
 let g:netrw_banner=0
 
-" Airline
-let g:airline_theme='base16_shell'
-let g:airline#extensions#tabline#enabled=1
-
-" Disable powerline symbols
+" Tmuxline
 let g:tmuxline_powerline_separators=0
 
 " Vim markdown
