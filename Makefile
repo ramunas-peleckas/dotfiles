@@ -1,4 +1,4 @@
-install: install-vim install-git install-tmux install-bash install-readline
+install: install-alacritty install-bash install-readline install-vim install-tmux install-git
 
 install-vim:
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -19,3 +19,6 @@ install-bash:
 
 install-readline:
 	ln -s `pwd`/readline/.inputrc ~/.inputrc
+
+install-alacritty:
+	ln -s `pwd`/alacritty/.alacritty.yml ~/.alacritty.yml
