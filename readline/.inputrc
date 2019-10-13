@@ -1,3 +1,9 @@
 set editing-mode vi
-set show-mode-in-prompt on
 set show-all-if-ambiguous on
+set keyseq-timeout 0
+set show-mode-in-prompt on
+set vi-ins-mode-string \1\e[5 q\2
+set vi-cmd-mode-string \1\e[2 q\2
+RETURN: "\e\n"
+"\e[A":history-search-backward
+"\e[B":history-search-forward
