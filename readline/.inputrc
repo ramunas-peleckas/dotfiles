@@ -1,4 +1,5 @@
 set editing-mode vi
+set colored-completion-prefix on
 set show-all-if-ambiguous on
 set keyseq-timeout 0
 set show-mode-in-prompt on
