@@ -15,7 +15,6 @@ install-tmux:
 	ln -s `pwd`/tmux/.tmuxline ~/.tmuxline
 
 install-bash:
-	git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 	ln -s `pwd`/bash/.bashrc ~/.bashrc
 
 install-readline:
