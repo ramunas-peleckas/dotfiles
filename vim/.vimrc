@@ -51,6 +51,9 @@ set backupdir=~/.vim/.backup//
 set textwidth=120
 set colorcolumn=+1
 
+" disable wrapping
+set formatoptions-=t
+
 " reduce key code delay
 set ttimeoutlen=10
 
