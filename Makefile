@@ -21,4 +21,4 @@ install-readline:
 	ln -s `pwd`/readline/.inputrc ~/.inputrc
 
 install-alacritty:
-	ln -s `pwd`/alacritty/.alacritty.yml ~/.alacritty.yml
+	ln -s `pwd`/alacritty/.alacritty.toml ~/.alacritty.toml
